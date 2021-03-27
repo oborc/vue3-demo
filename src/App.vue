@@ -1,16 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<dynamic-keep-demo/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import DynamicKeepDemo from './components/DynamicKeepDemo.vue'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { DynamicKeepDemo },
+  name: 'App'
 }
 </script>
 
