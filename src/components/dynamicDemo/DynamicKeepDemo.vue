@@ -29,11 +29,6 @@ export default {
       component2: true
     }
   },
-  props: {
-    person: {
-      type: Object
-    }
-  },
   components: {
     KeepSon1,
     KeepSon2
@@ -41,13 +36,9 @@ export default {
   methods: {
     changeActive () {
       this.component1 = !this.component1;
-      this.person.food = [];
     },
     changeActive2 () {
       this.component2 = !this.component2;
-      this.person.name = "return";
-      this.person.test = "addTest";
-      this.person.food.push("玉米啊");
     }
   }
 }
