@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import KeepSon1 from './keepSon1.vue';
-import KeepSon2 from './keepSon2.vue';
+import KeepSon1 from './keepSon1.vue'
+import KeepSon2 from './keepSon2.vue'
 export default {
   name: 'DynamicKeepDemo',
-  data(){
-    return{
+  data () {
+    return {
       component1: true,
       component2: true
     }
@@ -33,12 +33,12 @@ export default {
     KeepSon1,
     KeepSon2
   },
-  methods:{
-    changeActive(){
-      this.component1 = !this.component1;
+  methods: {
+    changeActive () {
+      this.component1 = !this.component1
     },
-    changeActive2(){
-      this.component2 = !this.component2;
+    changeActive2 () {
+      this.component2 = !this.component2
     }
   }
 }
