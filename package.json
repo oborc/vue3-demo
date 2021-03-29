@@ -9,16 +9,15 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "eslint": "^7.23.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.12",
-    "@vue/cli-plugin-eslint": "^4.5.12",
     "@vue/cli-service": "~4.5.12",
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
@@ -28,17 +27,66 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "browser": true,
+      "node": true,
+      "mocha": true,
+      "es6": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended",
+      "plugin:vue/essential",
       "@vue/standard"
     ],
     "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      },
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "globals": {
+      "$": true
+    },
+    "rules": {
+      "indent": [
+        "off",
+        4
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-cond-assign": [
+        "off",
+        "always"
+      ],
+      "no-unsafe-finally": [
+        "off",
+        "always"
+      ],
+      "no-useless-escape": [
+        "off",
+        "always"
+      ],
+      "no-func-assign": [
+        "off",
+        "always"
+      ],
+      "no-console": "off",
+      "eqeqeq": "off",
+      "no-prototype-builtins": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "mocha": true
+        }
+      }
+    ]
   },
   "browserslist": [
     "> 1%",
